@@ -34,13 +34,12 @@ namespace AspNet.Identity.Dapper
         /// Create a new Sql database connection
         /// </summary>
         /// <param name="connString">The name of the connection string</param>
-        public DbManager(string connString)
+        public DbManager()
         {
             // Use first?
-            if (connString == "")
-                connString = ConfigurationManager.ConnectionStrings[0].Name;
+            
 
-            _conn = new SqlConnection(connString);
+            _conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Skattjakten"].ConnectionString);
         }
 
         /// <summary>

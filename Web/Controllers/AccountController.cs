@@ -139,7 +139,7 @@ namespace Web.Controllers
 
         //
         // GET: /Account/Register
-        [AllowAnonymous]
+
         public ActionResult Register()
         {
             return View();
@@ -148,7 +148,6 @@ namespace Web.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {

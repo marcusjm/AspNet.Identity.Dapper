@@ -34,7 +34,8 @@ namespace AspNet.Identity.Dapper
         /// </summary>
         public RoleStore()
         {
-            new RoleStore<TRole>(new DbManager(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString));
+            new RoleStore<TRole>(new DbManager());
+            //new RoleStore<TRole>(new DbManager(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString));
         }
 
         /// <summary>

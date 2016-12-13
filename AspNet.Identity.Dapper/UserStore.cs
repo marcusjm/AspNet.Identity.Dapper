@@ -49,7 +49,8 @@ namespace AspNet.Identity.Dapper
         /// </summary>
         public UserStore()
         {
-            new UserStore<TUser>(new DbManager(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString));   
+            //new UserStore<TUser>(new DbManager(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString));   
+            new UserStore<TUser>(new DbManager());
         }
 
         /// <summary>
